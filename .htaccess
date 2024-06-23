@@ -1,0 +1,25 @@
+# BEGIN WordPress
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+#RewriteRule ^travel-deals/(.*)/ /Landing-Page-Flights.php?pn=$1 [L]
+#RewriteRule ^hotel-deals/(.*)/ /Landing-Page-Hotels.php?pn=$1 [L]
+
+RewriteRule ^flightdeal/(.*)/ /page.php?pn=$1 [L]
+RewriteRule ^hoteldeal/(.*)/ /page.php?pn=$1 [L]
+
+RewriteRule ^(.*)/(.*)/ /page.php?pn=$1&pc=$2 [L]
+RewriteRule ^(.*)/(.*)/ /page.php?pn=$1&lang=$2 [L]
+RewriteRule ^(.*)/ /page.php?pn=$1 [L]
+RewriteRule ^(.*)\.html$ $1.php [L] 
+
+RewriteRule ^(.*)\.xml$ $1.php [L]
+
+</IfModule>
+
+# END WordPress
